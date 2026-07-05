@@ -300,7 +300,7 @@ nav.scrolled {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 160px 32px 100px;
+  padding: 130px 32px 60px;
   position: relative;
   overflow: hidden;
 }
@@ -343,7 +343,7 @@ nav.scrolled {
   font-size: 12.5px;
   font-weight: 500;
   color: var(--mint);
-  margin-bottom: 32px;
+  margin-bottom: 22px;
 }
 
 .pulse-dot {
@@ -359,22 +359,25 @@ nav.scrolled {
 }
 
 .hero h1 {
-  font-size: clamp(44px, 6vw, 84px);
+  font-size: clamp(26px, 3.6vw, 50px);
   font-weight: 700;
-  line-height: 1.04;
-  letter-spacing: -3px;
-  margin-bottom: 26px;
+  line-height: 1.18;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+  max-width: 560px;
 }
+
+.hero h1 .hero-line-2 { display: block; margin-top: 0.45em; }
 
 .hero h1 .accent { color: var(--mint); }
 
 .hero-sub {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.6;
   color: var(--muted);
   max-width: 520px;
-  margin-bottom: 40px;
+  margin-bottom: 26px;
 }
 
 .form-wrap {
@@ -401,8 +404,10 @@ nav.scrolled {
 .form-input::placeholder { color: var(--muted2); }
 .form-input:focus { border-color: var(--border-hover); }
 
-.form-note { font-size: 13px; color: var(--muted2); margin-bottom: 44px; }
+.form-note { font-size: 13px; color: var(--muted2); margin-bottom: 14px; }
 .form-note span { color: var(--mint); }
+
+.andrea-hero-note { font-size: 13px; color: var(--mint); margin-bottom: 24px; }
 
 .success-msg {
   display: none;
@@ -683,12 +688,11 @@ nav.scrolled {
 
 .usecase-card:hover { border-color: var(--border-hover); transform: translateY(-4px); }
 
-.usecase-title { font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 700; color: var(--cloud); margin-bottom: 14px; }
+.usecase-title { font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 700; color: var(--cloud); margin-bottom: 10px; }
 .usecase-desc { font-size: 15px; color: var(--muted); line-height: 1.7; max-width: 380px; }
 
 .usecase-tag {
-  position: absolute;
-  top: 28px; right: 28px;
+  display: inline-block;
   background: rgba(0,212,170,0.1);
   border: 1px solid rgba(0,212,170,0.25);
   border-radius: 100px;
@@ -696,6 +700,7 @@ nav.scrolled {
   font-size: 11.5px;
   color: var(--mint);
   font-weight: 500;
+  margin-bottom: 16px;
 }
 
 /* ── HOW IT WORKS ── */
@@ -843,6 +848,54 @@ nav.scrolled {
 
 .pricing-note { text-align: center; font-size: 13px; color: var(--muted2); margin-top: 36px; }
 
+/* ── ANDREA AID ── */
+.andrea-section { background: #111118; padding: 130px 32px; }
+
+.andrea-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+
+.andrea-content .body-copy { line-height: 1.9; max-width: 520px; }
+
+.andrea-buttons { display: flex; gap: 14px; flex-wrap: wrap; }
+
+.andrea-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--cloud);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 15px 30px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.andrea-btn-secondary:hover { border-color: var(--mint); color: var(--mint); }
+
+.andrea-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 44px 40px;
+}
+
+.andrea-counter-label { font-size: 12px; letter-spacing: 1px; color: var(--muted2); text-transform: uppercase; margin-bottom: 10px; }
+.andrea-counter { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(38px, 4.5vw, 58px); color: var(--mint); line-height: 1.05; margin-bottom: 28px; }
+
+.andrea-bullets { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+.andrea-bullets li { display: flex; align-items: center; gap: 12px; font-size: 14.5px; color: var(--cloud); }
+
 /* ── FAQ ── */
 .faq { padding: 130px 32px; max-width: 860px; margin: 0 auto; }
 .faq-header { margin-bottom: 56px; }
@@ -964,6 +1017,10 @@ footer { border-top: 1px solid var(--border); padding: 48px 32px 36px; max-width
 
 .footer-copy { font-size: 12.5px; color: var(--muted2); }
 
+.footer-andrea { text-align: center; padding: 18px 0 0; font-size: 12.5px; color: var(--muted2); }
+.footer-andrea a { color: var(--mint); text-decoration: none; }
+.footer-andrea a:hover { text-decoration: underline; }
+
 /* ── RESPONSIVE ── */
 @media (max-width: 980px) {
   .nav-links { display: none; }
@@ -980,6 +1037,8 @@ footer { border-top: 1px solid var(--border); padding: 48px 32px 36px; max-width
   .alt-section .visual { order: 2; }
   .alt-section .content { order: 1; }
   .usecases-grid { grid-template-columns: 1fr; }
+  .andrea-section { padding: 90px 24px; }
+  .andrea-inner { grid-template-columns: 1fr; gap: 48px; }
   .steps { grid-template-columns: 1fr; }
   .plans-grid { grid-template-columns: 1fr; }
   .trust-item { border-left: none; border-top: 1px solid var(--border); padding-top: 20px; flex: 1 1 45%; }
@@ -1053,14 +1112,11 @@ footer { border-top: 1px solid var(--border); padding: 48px 32px 36px; max-width
 
   <div class="hero-inner">
     <div>
-      <div class="hero-badge">
-        <div class="pulse-dot"></div>
-        Early Founders Edition Now Open
-      </div>
+      <div class="hero-badge">The AI that remembers so you don't have to</div>
 
-      <h1>Your true<br>financial<br><span class="accent">flow.</span></h1>
+      <h1>Your work, family, and personal data are in 15 places.<span class="hero-line-2">TrueFlow is the one that <span class="accent">remembers</span> all of them.</span></h1>
 
-      <p class="hero-sub">Simplify your business finances with our AI that captures payments, tracks expenses and manages your clients. All by chatting on WhatsApp.</p>
+      <p class="hero-sub">TrueFlow is your personal AI for money, reminders, and clients. For individuals, families, and businesses. All by chatting with Tello on WhatsApp.</p>
 
       <div class="form-wrap" id="hero-form">
         <input class="form-input" type="email" placeholder="Enter your email address" id="hero-email" />
@@ -1069,7 +1125,9 @@ footer { border-top: 1px solid var(--border); padding: 48px 32px 36px; max-width
 
       <div class="success-msg" id="hero-success">✓ &nbsp; You're in! We'll reach out personally.</div>
 
-      <p class="form-note"><span>No credit card.</span> Founders get lifetime discounted pricing.</p>
+      <p class="form-note"><span>Free to start.</span> No credit card. For you, your family, and your business.</p>
+
+      <p class="andrea-hero-note">🤍 Every subscription funds life-saving medical care via Andrea</p>
 
       <div class="social-proof">
         <div class="avatars">
@@ -1078,7 +1136,7 @@ footer { border-top: 1px solid var(--border); padding: 48px 32px 36px; max-width
           <div class="avatar" style="background:#7c2d12; color:#fca5a5;">BN</div>
           <div class="avatar" style="background:#1e3a5f; color:#93c5fd;">FK</div>
         </div>
-        <div class="social-text">Real small business owners are testing TrueFlow and shaping what we build next.</div>
+        <div class="social-text">Real people, families, and business owners are testing TrueFlow and shaping what we build next.</div>
       </div>
     </div>
 
@@ -1122,24 +1180,19 @@ footer { border-top: 1px solid var(--border); padding: 48px 32px 36px; max-width
 <section class="trust-row reveal">
   <div class="trust-inner">
     <div class="trust-item">
-      <div class="trust-label">Built for African SMEs</div>
-      <div class="trust-sub">Made for how you actually work</div>
+      <div class="trust-label">For individuals, families and businesses</div>
     </div>
     <div class="trust-item">
-      <div class="trust-label">5 Countries</div>
-      <div class="trust-sub">Nigeria, Kenya, Ghana, USA, UK</div>
+      <div class="trust-label">5 Countries supported</div>
     </div>
     <div class="trust-item">
-      <div class="trust-label">3 Channels</div>
-      <div class="trust-sub">WhatsApp, Web, Mobile</div>
+      <div class="trust-label">One conversation, every answer</div>
     </div>
     <div class="trust-item">
-      <div class="trust-label">Free to Start</div>
-      <div class="trust-sub">No credit card needed</div>
+      <div class="trust-label">Free to start</div>
     </div>
     <div class="trust-item">
-      <div class="trust-label">Founders Edition Open</div>
-      <div class="trust-sub">Join the waitlist today</div>
+      <div class="trust-label">Founders Edition open</div>
     </div>
   </div>
 </section>
@@ -1211,7 +1264,7 @@ footer { border-top: 1px solid var(--border); padding: 48px 32px 36px; max-width
   <div class="content">
     <div class="eyebrow">Smart Transfer Recognition</div>
     <h2 class="headline">Forward it.<br>We'll figure it out.</h2>
-    <p class="body-copy">When a client sends you payment proof on WhatsApp, forward it to TrueFlow. Our AI reads the bank transfer, identifies the client, and logs the income to their folder automatically. Works with GTBank, Access, Zenith, UBA, Opay, Palmpay, Moniepoint, Kuda and every major Nigerian bank.</p>
+    <p class="body-copy">When a client sends you payment proof on WhatsApp, forward it to TrueFlow. Our AI reads the bank transfer, identifies the client, and logs the income automatically. Works with GTBank, Access, Zenith, UBA, Opay, Palmpay, Moniepoint, Kuda and every major Nigerian bank.</p>
     <a href="#founders" class="btn-primary">Join Founders Edition</a>
   </div>
 </section>
@@ -1221,7 +1274,7 @@ footer { border-top: 1px solid var(--border); padding: 48px 32px 36px; max-width
   <div class="content">
     <div class="eyebrow">Client CRM</div>
     <h2 class="headline">Every client.<br>Every project.<br>In one place.</h2>
-    <p class="body-copy">Create client folders, track project fees and deadlines, log incoming payments, and generate invoices. See your outstanding balance across all clients at a glance. Manage your entire client income from WhatsApp or your web dashboard.</p>
+    <p class="body-copy">Create client folders, track project fees and deadlines, log incoming payments, and generate invoices. See your outstanding balance across all clients at a glance.</p>
     <a href="#founders" class="btn-primary">Join Founders Edition</a>
   </div>
   <div class="visual">
@@ -1287,7 +1340,7 @@ footer { border-top: 1px solid var(--border); padding: 48px 32px 36px; max-width
   <div class="content">
     <div class="eyebrow">Tax Hub</div>
     <h2 class="headline">Track your tax.<br>Estimate your<br>liability.</h2>
-    <p class="body-copy">TrueFlow tracks VAT and tax automatically from every transaction. The Tax Hub shows your estimated liability across Nigeria, Kenya, Ghana, USA, and the UK with a country selector. Always labeled as an estimate, always paired with your accountant share link.</p>
+    <p class="body-copy">TrueFlow tracks VAT and tax from every transaction. The Tax Hub shows your estimated liability across Nigeria, Kenya, Ghana, USA, and the UK. Always an estimate, always paired with your accountant share link.</p>
     <a href="#founders" class="btn-primary">Join Founders Edition</a>
   </div>
   <div class="visual">
@@ -1352,24 +1405,24 @@ footer { border-top: 1px solid var(--border); padding: 48px 32px 36px; max-width
   </div>
   <div class="usecases-grid">
     <div class="usecase-card">
-      <div class="usecase-tag">Marcus</div>
-      <div class="usecase-title">Running a boutique</div>
-      <div class="usecase-desc">Track every sale, manage supplier expenses, and know your profit at the end of each day.</div>
+      <div class="usecase-title">Never lose a receipt again</div>
+      <div class="usecase-tag">Amaka · Lagos Island market trader</div>
+      <div class="usecase-desc">Scan it the moment you get it. Tello reads the vendor, amount, and date automatically. Your accountant gets the report whenever they need it.</div>
     </div>
     <div class="usecase-card">
-      <div class="usecase-tag">Jennifer</div>
-      <div class="usecase-title">Freelance designer or developer</div>
-      <div class="usecase-desc">Forward client payment screenshots, track project balances, and generate invoices from your phone.</div>
+      <div class="usecase-title">Chase payments without the awkward calls</div>
+      <div class="usecase-tag">Ibrahim · Freelance designer, Abuja</div>
+      <div class="usecase-desc">Forward the client's payment proof to TrueFlow. Tello identifies who paid, how much, and logs it against their project. No more mental math.</div>
     </div>
     <div class="usecase-card">
-      <div class="usecase-tag">Amaka</div>
-      <div class="usecase-title">Managing family finances</div>
-      <div class="usecase-desc">Give your spouse access, track household spending together, and set budgets for groceries, school fees, and utilities.</div>
+      <div class="usecase-title">One budget for the whole family</div>
+      <div class="usecase-tag">Marcus and Jennifer · Port Harcourt</div>
+      <div class="usecase-desc">Add your spouse. Track household spending together. Set limits for groceries, school fees, and transport. Tello alerts you before anyone goes over.</div>
     </div>
     <div class="usecase-card">
-      <div class="usecase-tag">Ibrahim</div>
-      <div class="usecase-title">Running an agency</div>
-      <div class="usecase-desc">Manage multiple clients, track project income, share reports with your accountant, and keep your team in sync.</div>
+      <div class="usecase-title">Never miss a deadline that matters</div>
+      <div class="usecase-tag">Tunde · Agency owner, Lekki</div>
+      <div class="usecase-desc">VAT. Salaries. Project deliveries. Supplier payments. Tell Tello once and it reminds you before it is too late. Works for birthdays too.</div>
     </div>
   </div>
 </section>
@@ -1486,6 +1539,32 @@ footer { border-top: 1px solid var(--border); padding: 48px 32px 36px; max-width
   <div class="pricing-note" id="pricingNote">Prices update instantly based on the country selected above. Final Founders Edition pricing may vary slightly at launch.</div>
 </section>
 
+<!-- ANDREA AID PARTNERSHIP -->
+<section class="andrea-section reveal">
+  <div class="andrea-inner">
+    <div class="andrea-content">
+      <div class="eyebrow">Andrea Aid Partnership</div>
+      <h2 class="headline">Every subscription helps save a life.</h2>
+      <p class="body-copy">2% of every TrueFlow subscription goes directly to Andrea, a verified medical fundraising platform connecting Nigerian hospitals with the funding needed to treat patients who cannot afford care.</p>
+      <p class="body-copy">When you manage your finances on TrueFlow, you are also helping a mother afford her surgery, a child receive the treatment they need, or a family avoid losing everything to a hospital bill.</p>
+      <p class="body-copy">One platform. Two missions. Your finances and someone else's life, connected.</p>
+      <div class="andrea-buttons">
+        <a href="https://andreaaid.com/cases" class="btn-primary">Browse patient cases</a>
+        <a href="https://andreaaid.com" class="andrea-btn-secondary">Learn about Andrea</a>
+      </div>
+    </div>
+    <div class="andrea-card">
+      <div class="andrea-counter-label">TrueFlow community contribution</div>
+      <div class="andrea-counter">Growing every month</div>
+      <ul class="andrea-bullets">
+        <li><div class="benefit-check"></div>100% verified Nigerian hospitals</li>
+        <li><div class="benefit-check"></div>Transparent, real-time donation tracking</li>
+        <li><div class="benefit-check"></div>Every naira goes directly to patient care</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <!-- FAQ -->
 <section class="faq reveal" id="faq">
   <div class="faq-header">
@@ -1495,11 +1574,11 @@ footer { border-top: 1px solid var(--border); padding: 48px 32px 36px; max-width
 
   <div class="faq-item">
     <div class="faq-q" onclick="toggleFaq(this)">What is TrueFlow?<div class="faq-icon"></div></div>
-    <div class="faq-a-wrap"><div class="faq-a-inner"><div class="faq-a">TrueFlow is an AI-powered financial assistant for African small businesses, freelancers, and families. It tracks your expenses, manages your client income, generates invoices, and helps you stay on top of budgets and tax, all through a web dashboard and soon via WhatsApp.</div></div></div>
+    <div class="faq-a-wrap"><div class="faq-a-inner"><div class="faq-a">TrueFlow is your personal AI assistant for everything that matters: your money, your reminders, your clients, and your deadlines. Instead of keeping track of 15 different places, you just chat with Tello on WhatsApp or on the web app and TrueFlow remembers everything for you. For individuals, families, freelancers, and small businesses.</div></div></div>
   </div>
   <div class="faq-item">
     <div class="faq-q" onclick="toggleFaq(this)">How does TrueFlow work?<div class="faq-icon"></div></div>
-    <div class="faq-a-wrap"><div class="faq-a-inner"><div class="faq-a">You start by signing up at gettrueflow.com. From the web app you can immediately start tracking expenses, managing clients, and chatting with Tello, our AI assistant. WhatsApp scanning and Smart Transfer Recognition are coming soon.</div></div></div>
+    <div class="faq-a-wrap"><div class="faq-a-inner"><div class="faq-a">Sign up at gettrueflow.com and join the Founders Edition. You can immediately start chatting with Tello, our AI assistant, on the web app. Tell Tello to track a payment, set a reminder, create a client folder, or check your budget. WhatsApp chat is coming soon. No forms to fill in. No spreadsheets. Just conversation.</div></div></div>
   </div>
   <div class="faq-item">
     <div class="faq-q" onclick="toggleFaq(this)">Is my financial data secure?<div class="faq-icon"></div></div>
@@ -1527,13 +1606,14 @@ footer { border-top: 1px solid var(--border); padding: 48px 32px 36px; max-width
 <section class="founders reveal" id="founders">
   <div class="founders-inner">
     <h2>Become an early founder of TrueFlow.</h2>
-    <p class="founders-sub">We're building this with real small business owners, not for them. Join the Early Founders Edition and shape what gets built next.</p>
+    <p class="founders-sub">We're building this with real people, real families, and real business owners, not for them. Join the Early Founders Edition and help shape what gets built next.</p>
 
     <div class="benefits">
       <div class="benefit-row"><div class="benefit-check"></div>Lifetime discounted pricing, locked in forever</div>
       <div class="benefit-row"><div class="benefit-check"></div>Permanent Founding Member badge on your account</div>
       <div class="benefit-row"><div class="benefit-check"></div>Direct WhatsApp line to the team</div>
       <div class="benefit-row"><div class="benefit-check"></div>First access to every new feature before public release</div>
+      <div class="benefit-row"><div class="benefit-check"></div>First visibility into the TrueFlow community Andrea contribution total before it becomes public</div>
     </div>
 
     <div class="founders-form" id="founders-form">
@@ -1577,6 +1657,7 @@ footer { border-top: 1px solid var(--border); padding: 48px 32px 36px; max-width
     </div>
     <div class="footer-copy">© 2026 True Financial Flow Ltd. All rights reserved.</div>
   </div>
+  <div class="footer-andrea">2% of every subscription funds Andrea medical cases · <a href="https://andreaaid.com">andreaaid.com</a></div>
 </footer>
 
 <script>
