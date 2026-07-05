@@ -29,10 +29,11 @@ Domain:          gettrueflow.com
 Web app:         app.gettrueflow.com
 Email:           gettrueflow@gmail.com
 Social handles:  @gettrueflow on Instagram, X, TikTok
-Tagline:         "Your true financial flow."
+Tagline primary:  "Your true financial flow."
+Tagline personal: "The AI that remembers so you don't have to."
+Tagline universal: "Your money. Your clients. Your life. One AI."
 
-Never write: TrueFlio, Truelio, TrueFlow® (trademark conflict),
-             trueflio, TRUEFLOW
+Never write: TrueFlio, Truelio, trueflio, TRUEFLOW, true flow (two words)
 Always write: TrueFlow (capital T, capital F, one word)
 
 ---
@@ -325,5 +326,276 @@ Teal (available now):
 4. Check available now badges appear on sections C, E, F only
 5. Verify all CTA buttons say "Join Founders Edition"
 6. Confirm footer says "True Financial Flow Ltd"
-7. Confirm no TrueFlio or trueflio anywhere in the file
+7. Confirm no TrueFlow or trueflow anywhere in the file
 8. Test the email form joinWaitlist function works on submit
+
+---
+
+## Andrea Aid — Cause Partnership Section
+
+### What Andrea Is
+
+Andrea (andreaaid.com) is a verified medical fundraising platform
+connecting Nigerian hospitals with donors to fund life-saving medical
+treatments for patients who cannot afford care. 100% verified
+hospitals. Transparent donations. Real-time updates.
+
+Tagline: "Connecting verified hospitals with caring donors to provide
+life-saving medical treatments."
+
+Empowered by: HRASA
+Social: @andreaaidint on Instagram, Facebook, TikTok, LinkedIn
+Live platform: andreaaid.com/cases (browse active patient cases)
+
+### The 2% Commitment
+
+2% of every TrueFlow subscription goes to Andrea every month.
+This comes from TrueFlow's own revenue. The user is NEVER charged
+extra. A user paying ₦7,500 pays exactly ₦7,500. TrueFlow routes
+₦150 internally to Andrea.
+
+Never describe this as an "extra charge" or "added fee".
+Always describe it as "2% of your subscription goes to Andrea"
+or "we give 2% to Andrea from every subscription."
+
+### Where Andrea Appears on the Landing Page
+
+Andrea appears in THREE places on the landing page:
+
+PLACE 1: Hero section, small badge below the main CTA
+  "Every subscription funds life-saving medical care via Andrea"
+  In small teal text with a heart icon, directly below the
+  "Join Founders Edition" button.
+
+PLACE 2: Dedicated full-width section (position: after pricing,
+before FAQ)
+  This is the main Andrea section. See copy below.
+
+PLACE 3: Footer, one line with Andrea logo link
+  "2% of every subscription funds Andrea medical cases"
+  with a link to andreaaid.com
+
+### Andrea Section Full Copy and Layout
+
+Section label: ANDREA AID PARTNERSHIP
+Headline: "Every subscription helps save a life."
+
+Body copy:
+"2% of every TrueFlow subscription goes directly to Andrea,
+a verified medical fundraising platform connecting Nigerian
+hospitals with the funding needed to treat patients who
+cannot afford care.
+
+When you manage your finances on TrueFlow, you are also
+helping a mother afford her surgery, a child receive the
+treatment they need, or a family avoid losing everything
+to a hospital bill.
+
+One platform. Two missions. Your finances and someone else's
+life, connected."
+
+Community counter (live number from Supabase, updated monthly):
+"TrueFlow users have contributed ₦[X] to Andrea"
+Displayed as a large number in Mint Verify #00D4AA
+
+Three bullet points with teal checkmarks:
+  100% verified Nigerian hospitals
+  Transparent, real-time donation tracking
+  Every naira goes directly to patient care
+
+Two buttons side by side:
+  Primary: "Browse patient cases" → andreaaid.com/cases
+  Secondary: "Learn about Andrea" → andreaaid.com
+
+Andrea logo or name shown clearly in this section.
+
+### What This Section Should NOT Do
+
+Do not make specific claims about amounts raised by Andrea
+(their site shows 0 as a placeholder, do not cite that)
+Do not claim Andrea is "Nigeria's largest" or any superlative
+Do not show a fake counter, the counter must be real or show
+"Growing every month" as a placeholder until real data exists
+Do not describe this as a donation the USER makes, it is a
+commitment TrueFlow makes from its own revenue
+
+### Founders Edition Connection
+
+The Andrea partnership is one of the four Founders Edition benefits.
+In the Founders Edition section, add:
+
+"First visibility into the TrueFlow community Andrea contribution
+ total before it becomes public"
+
+as the fifth benefit bullet after the existing four.
+
+### Andrea Section Visual Style
+
+Background: slightly lighter than the page background, use #111118
+to create a subtle section break without a harsh dividing line
+Andrea's brand colour is teal #0d9488, which is close to TrueFlow's
+Mint Verify #00D4AA. Use #00D4AA for consistency with TrueFlow's
+palette, not Andrea's exact hex.
+The section should feel warm and human, not corporate, use slightly
+larger line height (1.9) for the body copy in this section
+The community counter number should be the largest text element in
+the section, even larger than the headline, since it is the most
+tangible proof of impact
+
+### /andrea-aid Page
+
+Build a simple public page at gettrueflow.com/andrea-aid (a separate
+section within the single HTML file, hidden by default, shown when
+the URL hash is #andrea-aid, or as a separate linked page if the
+build goes multi-page):
+
+Content:
+  TrueFlow + Andrea logos side by side
+  "The TrueFlow x Andrea Partnership"
+  Full explanation of the 2% model
+  Community contribution total counter
+  How the money is used (Andrea's verified hospital model)
+  Link to browse active cases at andreaaid.com/cases
+  Andrea social handles @andreaaidint
+
+### Claude Code Instructions for Andrea Section
+
+1. The Andrea section sits AFTER the pricing section and BEFORE
+   the FAQ section in the page order
+2. The community counter shows a real number if available from
+   Supabase, or a placeholder "Growing every month" if not
+3. The "Browse patient cases" button links to andreaaid.com/cases
+4. The "Learn about Andrea" button links to andreaaid.com
+5. The Andrea section uses the same alternating content and
+   visual layout pattern as the feature sections, with the Andrea
+   visual or counter on one side and the copy on the other
+6. Never show ₦0 as the community counter, use the placeholder
+   text instead if real data is not yet available
+7. The small badge in the hero section sits directly below the
+   main CTA button, not beside it
+
+---
+
+## Updated Positioning and Hero Copy
+
+### The Anchor Line
+
+"If your work, family, and personal data are in 15 places,
+you only need to check 14 to forget something."
+
+This single line defines TrueFlow's brand voice and positioning.
+Every headline, caption, and section of this landing page should
+connect back to this feeling. It is the reason TrueFlow exists.
+
+### Updated Hero Section Copy
+
+Replace the existing hero subheadline with this priority order.
+Use Option A as the primary hero headline on the redesigned page.
+
+HERO HEADLINE OPTION A (primary, most powerful):
+  "Your work, family, and personal data
+   are in 15 places.
+
+   TrueFlow is the one that remembers
+   all of them."
+
+HERO HEADLINE OPTION B (the bold version):
+  "You only need to check 14 places
+   to forget something.
+
+   We built the 15th."
+
+HERO SUBHEADLINE (use below whichever headline is chosen):
+  "TrueFlow is your personal AI for money, reminders, and clients.
+   For individuals, families, and businesses.
+   All by chatting with Tello on WhatsApp."
+
+HERO BADGE (small, above the headline):
+  "The AI that remembers so you don't have to"
+
+HERO FORM NOTE (below the email input):
+  "Free to start. No credit card. For you, your family,
+   and your business."
+
+### Updated FAQ Answers — Wider Positioning
+
+Q1. What is TrueFlow?
+Updated answer:
+"TrueFlow is your personal AI assistant for everything that
+matters: your money, your reminders, your clients, and your
+deadlines. Instead of keeping track of 15 different places,
+you just chat with Tello on WhatsApp or on the web app and
+TrueFlow remembers everything for you. For individuals,
+families, freelancers, and small businesses."
+
+Q2. How does TrueFlow work?
+Updated answer:
+"Sign up at gettrueflow.com and join the Founders Edition.
+You can immediately start chatting with Tello, our AI
+assistant, on the web app. Tell Tello to track a payment,
+set a reminder, create a client folder, or check your budget.
+WhatsApp chat is coming soon. No forms to fill in. No
+spreadsheets. Just conversation."
+
+### Updated Everyday Use Cases Section
+
+Replace the four cards with this updated copy that leads
+with feeling not category:
+
+Card 1: "Never lose a receipt again"
+"Scan it the moment you get it. Tello reads the vendor,
+amount, and date automatically. Your accountant gets the
+report whenever they need it."
+Detail: "Amaka · Lagos Island market trader"
+
+Card 2: "Chase payments without the awkward calls"
+"Forward the client's payment proof to TrueFlow. Tello
+identifies who paid, how much, and logs it against their
+project. No more mental math."
+Detail: "Ibrahim · Freelance designer, Abuja"
+
+Card 3: "One budget for the whole family"
+"Add your spouse. Track household spending together.
+Set limits for groceries, school fees, and transport.
+Tello alerts you before anyone goes over."
+Detail: "Marcus and Jennifer · Port Harcourt"
+
+Card 4: "Never miss a deadline that matters"
+"VAT. Salaries. Project deliveries. Supplier payments.
+Tell Tello once and it reminds you before it is too late.
+Works for birthdays too."
+Detail: "Tunde · Agency owner, Lekki"
+
+### Updated Trust Badges Row
+
+Replace existing badges with these five that match
+the wider personal positioning:
+
+  "For individuals, families and businesses"
+  "5 Countries supported"
+  "One conversation, every answer"
+  "Free to start"
+  "Founders Edition open"
+
+### Voice Test for Every Line on This Page
+
+Before finalising any copy ask:
+Would a Lagos market trader forward this to a friend
+on WhatsApp and say "this is me"?
+If yes: approved.
+If no: rewrite it.
+
+### Copy Rules for This Page
+
+Never write: "AI financial assistant for African small
+businesses" as the opening or hero line.
+
+Never lead the page with business-only language.
+The individual and family audience must feel included
+from the very first sentence they read.
+
+Always lead with the feeling.
+The feeling is: "I will never lose track of anything
+important again."
+The features (receipts, clients, budgets, reminders)
+are discovered after the feeling lands.
