@@ -295,6 +295,13 @@ nav.scrolled {
   text-decoration: none;
 }
 
+.mobile-menu .mobile-secondary-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--muted);
+  margin-top: -18px;
+}
+
 /* ── HERO ── */
 .hero {
   min-height: 100vh;
@@ -359,17 +366,21 @@ nav.scrolled {
 }
 
 .hero h1 {
-  font-size: clamp(26px, 3.6vw, 50px);
+  font-size: clamp(52px, 7.5vw, 92px);
   font-weight: 700;
-  line-height: 1.18;
-  letter-spacing: -1px;
-  margin-bottom: 20px;
-  max-width: 560px;
+  line-height: 1.02;
+  letter-spacing: -2.5px;
+  margin-bottom: 24px;
 }
 
-.hero h1 .hero-line-2 { display: block; margin-top: 0.45em; }
-
 .hero h1 .accent { color: var(--mint); }
+
+.hero-cta-row { display: flex; align-items: center; gap: 16px; margin-bottom: 14px; flex-wrap: wrap; }
+.hero-secondary-link { font-size: 14px; margin-bottom: 18px; }
+.hero-secondary-link a { color: var(--muted); text-decoration: underline; text-underline-offset: 3px; }
+.hero-secondary-link a:hover { color: var(--cloud); }
+
+.hero-trust-line { font-size: 13.5px; color: var(--muted); margin-bottom: 28px; }
 
 .hero-sub {
   font-size: 17px;
@@ -380,56 +391,7 @@ nav.scrolled {
   margin-bottom: 26px;
 }
 
-.form-wrap {
-  display: flex;
-  gap: 10px;
-  max-width: 480px;
-  margin-bottom: 18px;
-}
-
-.form-input {
-  flex: 1;
-  min-width: 0;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 100px;
-  padding: 16px 22px;
-  font-family: 'Inter', sans-serif;
-  font-size: 15px;
-  color: var(--cloud);
-  outline: none;
-  transition: border-color 0.2s;
-}
-
-.form-input::placeholder { color: var(--muted2); }
-.form-input:focus { border-color: var(--border-hover); }
-
-.form-note { font-size: 13px; color: var(--muted2); margin-bottom: 14px; }
-.form-note span { color: var(--mint); }
-
 .andrea-hero-note { font-size: 13px; color: var(--mint); margin-bottom: 24px; }
-
-.success-msg {
-  display: none;
-  align-items: center;
-  gap: 10px;
-  background: rgba(0,212,170,0.08);
-  border: 1px solid rgba(0,212,170,0.25);
-  border-radius: 100px;
-  padding: 15px 24px;
-  font-size: 14px;
-  color: var(--mint);
-  font-weight: 500;
-  max-width: 480px;
-  margin-bottom: 18px;
-}
-
-.success-msg.show { display: flex; animation: fadeUp 0.4s ease both; }
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(14px); }
-  to { opacity: 1; transform: translateY(0); }
-}
 
 .social-proof { display: flex; align-items: center; gap: 16px; }
 
@@ -571,6 +533,18 @@ nav.scrolled {
 
 .trust-sub { font-size: 12px; color: var(--muted2); }
 
+/* ── SECTION KICKER (buzzword transitions) ── */
+.section-kicker {
+  text-align: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--mint);
+  padding: 48px 32px 0;
+}
+
 /* ── ALTERNATING FEATURE SECTIONS ── */
 .alt-section {
   display: grid;
@@ -583,6 +557,11 @@ nav.scrolled {
 }
 
 .alt-section .visual { position: relative; display: flex; justify-content: center; }
+.alt-section.minimized { padding: 70px 32px; }
+.alt-section.minimized .body-copy { max-width: 420px; margin-bottom: 24px; }
+.dash-mockup.small { max-width: 320px; margin-bottom: 46px; }
+.dash-mockup.small .dash-body { padding: 32px 20px; display: flex; justify-content: center; }
+.tello-bubble-float.static { position: static; max-width: 260px; }
 .alt-section.reverse .content { order: 2; }
 .alt-section.reverse .visual { order: 1; }
 
@@ -690,6 +669,7 @@ nav.scrolled {
 
 .usecase-title { font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 700; color: var(--cloud); margin-bottom: 10px; }
 .usecase-desc { font-size: 15px; color: var(--muted); line-height: 1.7; max-width: 380px; }
+.usecase-quote { font-size: 14px; color: var(--mint); font-style: italic; margin-top: 14px; }
 
 .usecase-tag {
   display: inline-block;
@@ -992,7 +972,6 @@ nav.scrolled {
   background-position: center;
 }
 
-.founders-form { display: flex; gap: 10px; max-width: 460px; margin: 0 auto 18px; }
 .founders-note { font-size: 12.5px; color: var(--muted2); line-height: 1.6; }
 .founders-note span { color: var(--mint); }
 
@@ -1046,7 +1025,6 @@ footer { border-top: 1px solid var(--border); padding: 48px 32px 36px; max-width
 }
 
 @media (max-width: 560px) {
-  .form-wrap, .founders-form { flex-direction: column; }
   .footer-row { flex-direction: column; align-items: flex-start; }
   .hero { padding: 130px 20px 70px; }
 }
@@ -1090,7 +1068,7 @@ footer { border-top: 1px solid var(--border); padding: 48px 32px 36px; max-width
       </div>
     </div>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark mode">🌙</button>
-    <a href="#founders" class="btn-primary">Join Founders Edition</a>
+    <a href="https://api.whatsapp.com/send?phone=2349020377046&text=Hi" class="btn-primary" target="_blank" rel="noopener">Try it out 👇</a>
     <div class="nav-burger" id="burger">
       <span></span><span></span><span></span>
     </div>
@@ -1102,7 +1080,8 @@ footer { border-top: 1px solid var(--border); padding: 48px 32px 36px; max-width
   <a href="#how">How it Works</a>
   <a href="#pricing">Pricing</a>
   <a href="#faq">FAQ</a>
-  <a href="#founders" class="btn-primary">Join Founders Edition</a>
+  <a href="https://api.whatsapp.com/send?phone=2349020377046&text=Hi" class="btn-primary" target="_blank" rel="noopener">Try it out 👇</a>
+  <a href="https://api.whatsapp.com/send?phone=2349020377046&text=Hi" class="mobile-secondary-link" target="_blank" rel="noopener">or apply to be an early Ambassador</a>
 </div>
 
 <!-- HERO -->
@@ -1112,22 +1091,21 @@ footer { border-top: 1px solid var(--border); padding: 48px 32px 36px; max-width
 
   <div class="hero-inner">
     <div>
-      <div class="hero-badge">The AI that remembers so you don't have to</div>
+      <div class="hero-badge">🟢 WhatsApp is live. Message us right now.</div>
 
-      <h1>Your work, family, and personal data are in 15 places.<span class="hero-line-2">TrueFlow is the one that <span class="accent">remembers</span> all of them.</span></h1>
+      <h1>Stress less.<br><span class="accent">Flow</span> more.</h1>
 
-      <p class="hero-sub">TrueFlow is your personal AI for money, reminders, and clients. For individuals, families, and businesses. All by chatting with Tello on WhatsApp.</p>
+      <p class="hero-sub">Money, clients, birthdays &amp; bills, remembered by TrueFlow. No app to download. No forms to fill. Just message us on WhatsApp and watch it work.</p>
 
-      <div class="form-wrap" id="hero-form">
-        <input class="form-input" type="email" placeholder="Enter your email address" id="hero-email" />
-        <button class="btn-primary" onclick="joinWaitlist('hero-email','hero-success','hero-form')">Join Founders Edition</button>
+      <div class="hero-cta-row">
+        <a href="https://api.whatsapp.com/send?phone=2349020377046&text=Hi" class="btn-primary" target="_blank" rel="noopener">Try it out 👇</a>
       </div>
 
-      <div class="success-msg" id="hero-success">✓ &nbsp; You're in! We'll reach out personally.</div>
-
-      <p class="form-note"><span>Free to start.</span> No credit card. For you, your family, and your business.</p>
+      <p class="hero-secondary-link"><a href="https://api.whatsapp.com/send?phone=2349020377046&text=Hi" target="_blank" rel="noopener">or apply to be an early Ambassador</a> · try it before you believe it</p>
 
       <p class="andrea-hero-note">🤍 Every subscription funds life-saving medical care via Andrea</p>
+
+      <p class="hero-trust-line">🇳🇬 🇬🇭 🇰🇪 🇺🇸 — testing live in Nigeria, Ghana, Kenya, and the USA</p>
 
       <div class="social-proof">
         <div class="avatars">
@@ -1136,7 +1114,7 @@ footer { border-top: 1px solid var(--border); padding: 48px 32px 36px; max-width
           <div class="avatar" style="background:#7c2d12; color:#fca5a5;">BN</div>
           <div class="avatar" style="background:#1e3a5f; color:#93c5fd;">FK</div>
         </div>
-        <div class="social-text">Real people, families, and business owners are testing TrueFlow and shaping what we build next.</div>
+        <div class="social-text">Real people, families, and business owners are already messaging TrueFlow on WhatsApp.</div>
       </div>
     </div>
 
@@ -1153,19 +1131,23 @@ footer { border-top: 1px solid var(--border); padding: 48px 32px 36px; max-width
               </div>
             </div>
 
+            <div class="bubble bubble-out">
+              Hi
+              <div class="bubble-time">09:02 ✓✓</div>
+            </div>
             <div class="bubble bubble-in">
-              👋 Hey! I'm <strong>Tello</strong>, your TrueFlow assistant. Send me a receipt photo, forward a payment screenshot, or just ask me how your business is doing this month.
+              👋 Hey! I'm <strong>Tello</strong>, your TrueFlow assistant. I can track receipts, set budgets, and remind you about anything, bills, birthdays, deadlines. Just tell me what you need.
               <div class="bubble-time">09:02</div>
             </div>
             <div class="bubble bubble-out">
-              How much did I spend on supplies in June?
+              Remind me to pack my travel bag Friday morning
               <div class="bubble-time">09:03 ✓✓</div>
             </div>
             <div class="bubble bubble-in">
-              You spent <strong>₦184,300</strong> on supplies in June, across 12 receipts. That's <span class="mint">↓ 8% lower</span> than May.
+              ⏰ Got it! I'll remind you to <strong>pack your travel bag</strong> Friday morning.
               <div class="chip-row">
-                <div class="chip">12 receipts</div>
-                <div class="chip">↓ 8% vs May</div>
+                <div class="chip">Reminder set</div>
+                <div class="chip">Fri 8:00am</div>
               </div>
               <div class="bubble-time">09:03</div>
             </div>
@@ -1175,6 +1157,8 @@ footer { border-top: 1px solid var(--border); padding: 48px 32px 36px; max-width
     </div>
   </div>
 </section>
+
+<div class="section-kicker">Real. Live. Working right now.</div>
 
 <!-- TRUST ROW -->
 <section class="trust-row reveal">
@@ -1204,8 +1188,8 @@ footer { border-top: 1px solid var(--border); padding: 48px 32px 36px; max-width
   <div class="content">
     <div class="eyebrow">Receipt Capture</div>
     <h2 class="headline">Scan any receipt.<br>Instantly.</h2>
-    <p class="body-copy">Photo, screenshot, or WhatsApp forward. Tello reads the vendor, amount, date and category in seconds. No typing. No manual entry. Works for businesses, families and individuals.</p>
-    <a href="#founders" class="btn-primary">Join Founders Edition</a>
+    <p class="body-copy">Photo, screenshot, or WhatsApp forward. Tello reads the vendor, amount, date and category in seconds. No typing. No manual entry. It just works.</p>
+    <a href="https://api.whatsapp.com/send?phone=2349020377046&text=Hi" class="btn-primary" target="_blank" rel="noopener">Try it out 👇</a>
   </div>
   <div class="visual">
     <div class="phone">
@@ -1230,11 +1214,81 @@ footer { border-top: 1px solid var(--border); padding: 48px 32px 36px; max-width
         </div>
       </div>
     </div>
-    <div class="mockup-badge amber">Coming soon via WhatsApp</div>
+    <div class="mockup-badge teal">Available now on WhatsApp</div>
   </div>
 </section>
 
-<!-- B: SMART TRANSFER RECOGNITION -->
+<!-- B: REMINDERS THAT ACTUALLY REMIND -->
+<section class="alt-section reverse reveal">
+  <div class="visual">
+    <div class="phone">
+      <div class="phone-screen">
+        <div class="phone-notch"></div>
+        <div class="phone-content">
+          <div class="chat-head">
+            <div class="chat-avatar">T</div>
+            <div><div class="chat-title">Tello</div><div class="chat-status">● Online</div></div>
+          </div>
+          <div class="bubble bubble-out">Remind me to pay the light bill every month on the 5th<div class="bubble-time">07:40 ✓✓</div></div>
+          <div class="bubble bubble-in">
+            ⏰ Got it! I'll remind you to <strong>pay the light bill</strong> on the <strong>5th of every month</strong>.
+            <div class="chip-row">
+              <div class="chip">Recurring</div>
+              <div class="chip">Monthly · 5th</div>
+            </div>
+            <div class="bubble-time">07:40</div>
+          </div>
+          <div class="bubble bubble-in">
+            📅 Reminder: <strong>light bill</strong> is due today.
+            <div class="bubble-time">05 Jul, 08:00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mockup-badge teal">Available now on WhatsApp</div>
+  </div>
+  <div class="content">
+    <div class="eyebrow">Reminders</div>
+    <h2 class="headline">Tell it once.<br>Never forget again.</h2>
+    <p class="body-copy">Bills, birthdays, deadlines, trip prep, anything that matters. Tell Tello once in plain language and it remembers so you don't have to. The AI that actually remembers.</p>
+    <a href="https://api.whatsapp.com/send?phone=2349020377046&text=Hi" class="btn-primary" target="_blank" rel="noopener">Try it out 👇</a>
+  </div>
+</section>
+
+<!-- C: BUDGETS BY CHAT -->
+<section class="alt-section reveal">
+  <div class="content">
+    <div class="eyebrow">Budgets</div>
+    <h2 class="headline">Say the number.<br>We'll track it.</h2>
+    <p class="body-copy">Tell Tello how much to budget for groceries, transport, or the whole month. Get a nudge before you overspend. No app. No forms. Just WhatsApp.</p>
+    <a href="https://api.whatsapp.com/send?phone=2349020377046&text=Hi" class="btn-primary" target="_blank" rel="noopener">Try it out 👇</a>
+  </div>
+  <div class="visual">
+    <div class="phone">
+      <div class="phone-screen">
+        <div class="phone-notch"></div>
+        <div class="phone-content">
+          <div class="chat-head">
+            <div class="chat-avatar">T</div>
+            <div><div class="chat-title">Tello</div><div class="chat-status">● Online</div></div>
+          </div>
+          <div class="bubble bubble-out">Budget 50k for groceries this month<div class="bubble-time">09:12 ✓✓</div></div>
+          <div class="bubble bubble-in">
+            ✅ Budget set: <strong>₦50,000</strong> for groceries this month. I'll let you know before you hit the limit.
+            <div class="bubble-time">09:12</div>
+          </div>
+          <div class="bubble bubble-in">
+            ⚠️ <span class="amber">Heads up:</span> you've used 80% of your <strong>groceries</strong> budget (₦40,000 / ₦50,000).
+            <div class="bubble-time">18 Jul, 08:00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mockup-badge teal">Available now on WhatsApp</div>
+  </div>
+</section>
+
+<!-- D: SMART TRANSFER RECOGNITION -->
 <section class="alt-section reverse reveal">
   <div class="visual">
     <div class="phone">
@@ -1265,17 +1319,19 @@ footer { border-top: 1px solid var(--border); padding: 48px 32px 36px; max-width
     <div class="eyebrow">Smart Transfer Recognition</div>
     <h2 class="headline">Forward it.<br>We'll figure it out.</h2>
     <p class="body-copy">When a client sends you payment proof on WhatsApp, forward it to TrueFlow. Our AI reads the bank transfer, identifies the client, and logs the income automatically. Works with GTBank, Access, Zenith, UBA, Opay, Palmpay, Moniepoint, Kuda and every major Nigerian bank.</p>
-    <a href="#founders" class="btn-primary">Join Founders Edition</a>
+    <a href="https://api.whatsapp.com/send?phone=2349020377046&text=Hi" class="btn-primary" target="_blank" rel="noopener">Try it out 👇</a>
   </div>
 </section>
 
-<!-- C: CLIENT CRM -->
+<div class="section-kicker">This isn't a demo, it's the real thing.</div>
+
+<!-- E: CLIENT CRM (WEB) -->
 <section class="alt-section reveal">
   <div class="content">
-    <div class="eyebrow">Client CRM</div>
+    <div class="eyebrow">Client CRM · Also on the Web</div>
     <h2 class="headline">Every client.<br>Every project.<br>In one place.</h2>
-    <p class="body-copy">Create client folders, track project fees and deadlines, log incoming payments, and generate invoices. See your outstanding balance across all clients at a glance.</p>
-    <a href="#founders" class="btn-primary">Join Founders Edition</a>
+    <p class="body-copy">Prefer a fuller dashboard? Create client folders, track project fees and deadlines, log incoming payments, and generate invoices. See your outstanding balance across all clients at a glance.</p>
+    <a href="https://api.whatsapp.com/send?phone=2349020377046&text=Hi" class="btn-primary" target="_blank" rel="noopener">Try it out 👇</a>
   </div>
   <div class="visual">
     <div class="dash-mockup">
@@ -1299,101 +1355,32 @@ footer { border-top: 1px solid var(--border); padding: 48px 32px 36px; max-width
         </div>
       </div>
     </div>
-    <div class="mockup-badge teal">Available now</div>
+    <div class="mockup-badge teal">Available now on web</div>
   </div>
 </section>
 
-<!-- D: BUDGETS & REMINDERS -->
-<section class="alt-section reverse reveal">
+<!-- F: MEET TELLO (WEB, MINIMIZED) -->
+<section class="alt-section reverse reveal minimized">
   <div class="visual">
-    <div class="phone">
-      <div class="phone-screen">
-        <div class="phone-notch"></div>
-        <div class="phone-content">
-          <div class="chat-head">
-            <div class="chat-avatar">T</div>
-            <div><div class="chat-title">Tello</div><div class="chat-status">● Online</div></div>
-          </div>
-          <div class="bubble bubble-in">
-            ⚠️ <span class="amber">Budget alert:</span> you've used 90% of your <strong>Supplies</strong> budget for June (₦180,000 / ₦200,000).
-            <div class="bubble-time">08:00</div>
-          </div>
-          <div class="bubble bubble-in">
-            ⏰ Reminder: <strong>VAT filing</strong> is due in 3 days. Want me to prep your report?
-            <div class="bubble-time">08:01</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="mockup-badge amber">Coming soon via WhatsApp</div>
-  </div>
-  <div class="content">
-    <div class="eyebrow">Budgets & Reminders</div>
-    <h2 class="headline">Know before<br>you overspend.</h2>
-    <p class="body-copy">Set budgets per category and get alerts before you hit the limit. Remind yourself about VAT deadlines, salary days, supplier payments and project deliveries. Set it once and TrueFlow handles the rest.</p>
-    <a href="#founders" class="btn-primary">Join Founders Edition</a>
-  </div>
-</section>
-
-<!-- E: TAX HUB -->
-<section class="alt-section reveal">
-  <div class="content">
-    <div class="eyebrow">Tax Hub</div>
-    <h2 class="headline">Track your tax.<br>Estimate your<br>liability.</h2>
-    <p class="body-copy">TrueFlow tracks VAT and tax from every transaction. The Tax Hub shows your estimated liability across Nigeria, Kenya, Ghana, USA, and the UK. Always an estimate, always paired with your accountant share link.</p>
-    <a href="#founders" class="btn-primary">Join Founders Edition</a>
-  </div>
-  <div class="visual">
-    <div class="dash-mockup">
+    <div class="dash-mockup small">
       <div class="dash-chrome">
         <div class="dash-dot"></div><div class="dash-dot"></div><div class="dash-dot"></div>
-        <div class="dash-url">app.gettrueflow.com/tax</div>
+        <div class="dash-url">app.gettrueflow.com/chat</div>
       </div>
       <div class="dash-body">
-        <div class="country-select">🇳🇬 Nigeria <span style="color:var(--muted2)">▾</span></div>
-        <div class="dash-card">
-          <div class="dash-card-title">Estimated Liability</div>
-          <div class="dash-row"><div class="dash-row-label">VAT (7.5%)</div><div class="dash-row-value amber">₦42,600</div></div>
-          <div class="dash-row"><div class="dash-row-label">Company Income Tax</div><div class="dash-row-value amber">₦118,000</div></div>
-        </div>
-        <div class="dash-card">
-          <div class="dash-card-title">Transaction Log</div>
-          <div class="dash-row"><div class="dash-row-label">Client payment · Jun 14</div><div class="dash-row-value">₦150,000</div></div>
-          <div class="dash-row"><div class="dash-row-label">Supplier expense · Jun 12</div><div class="dash-row-value">₦24,500</div></div>
+        <div class="tello-bubble-float static">
+          <div class="t-head"><div class="tello-lettermark">T</div></div>
+          <p>Hi! I'm Tello. Ask me anything about your finances, anytime.</p>
         </div>
       </div>
     </div>
-    <div class="mockup-badge teal">Available now</div>
-  </div>
-</section>
-
-<!-- F: TELLO AI -->
-<section class="alt-section reverse reveal">
-  <div class="visual">
-    <div class="dash-mockup">
-      <div class="dash-chrome">
-        <div class="dash-dot"></div><div class="dash-dot"></div><div class="dash-dot"></div>
-        <div class="dash-url">app.gettrueflow.com/dashboard</div>
-      </div>
-      <div class="dash-body">
-        <div class="dash-card">
-          <div class="dash-card-title">This Month</div>
-          <div class="dash-row"><div class="dash-row-label">Income</div><div class="dash-row-value mint">₦420,000</div></div>
-          <div class="dash-row"><div class="dash-row-label">Expenses</div><div class="dash-row-value amber">₦184,300</div></div>
-        </div>
-      </div>
-      <div class="tello-bubble-float">
-        <div class="t-head"><div class="tello-lettermark">T</div></div>
-        <p>Hi! I'm Tello. Ask me anything about your finances, anytime.</p>
-      </div>
-    </div>
-    <div class="mockup-badge teal">Available now</div>
+    <div class="mockup-badge teal">Available now on web</div>
   </div>
   <div class="content">
-    <div class="eyebrow">Tello AI Assistant</div>
-    <h2 class="headline">Meet Tello.<br>Available right now.</h2>
-    <p class="body-copy">Tello is TrueFlow's built-in AI assistant, live on the web app today. Ask about your spending, create a client, set a reminder, or get a budget breakdown. Tello knows your finances and answers in seconds. No WhatsApp needed to get started.</p>
-    <a href="#founders" class="btn-primary">Join Founders Edition</a>
+    <div class="eyebrow">Meet Tello</div>
+    <h2 class="headline">Prefer typing on a screen?<br>Tello's on the web too.</h2>
+    <p class="body-copy">Same brain, browser instead of WhatsApp. Ask about your spending or get a budget breakdown at app.gettrueflow.com.</p>
+    <a href="https://api.whatsapp.com/send?phone=2349020377046&text=Hi" class="btn-primary" target="_blank" rel="noopener">Try it out 👇</a>
   </div>
 </section>
 
@@ -1408,16 +1395,19 @@ footer { border-top: 1px solid var(--border); padding: 48px 32px 36px; max-width
       <div class="usecase-title">Never lose a receipt again</div>
       <div class="usecase-tag">Amaka · Lagos Island market trader</div>
       <div class="usecase-desc">Scan it the moment you get it. Tello reads the vendor, amount, and date automatically. Your accountant gets the report whenever they need it.</div>
+      <div class="usecase-quote">"Your money, your reminders, your life. Sorted in one chat."</div>
     </div>
     <div class="usecase-card">
       <div class="usecase-title">Chase payments without the awkward calls</div>
       <div class="usecase-tag">Ibrahim · Freelance designer, Abuja</div>
       <div class="usecase-desc">Forward the client's payment proof to TrueFlow. Tello identifies who paid, how much, and logs it against their project. No more mental math.</div>
+      <div class="usecase-quote">"Chase less. Get paid faster. Know your numbers, always."</div>
     </div>
     <div class="usecase-card">
       <div class="usecase-title">One budget for the whole family</div>
       <div class="usecase-tag">Marcus and Jennifer · Port Harcourt</div>
       <div class="usecase-desc">Add your spouse. Track household spending together. Set limits for groceries, school fees, and transport. Tello alerts you before anyone goes over.</div>
+      <div class="usecase-quote">"Never forget mum's birthday, school fees, or the light bill, ever again."</div>
     </div>
     <div class="usecase-card">
       <div class="usecase-title">Never miss a deadline that matters</div>
@@ -1426,6 +1416,8 @@ footer { border-top: 1px solid var(--border); padding: 48px 32px 36px; max-width
     </div>
   </div>
 </section>
+
+<div class="section-kicker">Zero setup. One message.</div>
 
 <!-- HOW IT WORKS -->
 <section class="how reveal" id="how">
@@ -1458,7 +1450,7 @@ footer { border-top: 1px solid var(--border); padding: 48px 32px 36px; max-width
     <div class="eyebrow">Team Access</div>
     <h2 class="headline">Your team.<br>Your rules.</h2>
     <p class="body-copy">Invite staff to scan receipts on WhatsApp without giving them full dashboard access. Add family members to a shared budget. Grant your accountant read-only access with a single link. Three permission toggles per person: WhatsApp access, client visibility, export rights.</p>
-    <a href="#founders" class="btn-primary">Join Founders Edition</a>
+    <a href="https://api.whatsapp.com/send?phone=2349020377046&text=Hi" class="btn-primary" target="_blank" rel="noopener">Try it out 👇</a>
   </div>
   <div class="visual">
     <div class="team-visual">
@@ -1500,7 +1492,7 @@ footer { border-top: 1px solid var(--border); padding: 48px 32px 36px; max-width
         <li>Tello AI Chat</li>
         <li>Basic dashboard</li>
       </ul>
-      <a href="#founders" class="plan-btn">Join Founders Edition</a>
+      <a href="https://api.whatsapp.com/send?phone=2349020377046&text=Hi" class="plan-btn" target="_blank" rel="noopener">Try it out 👇</a>
     </div>
 
     <div class="plan-card popular">
@@ -1516,7 +1508,7 @@ footer { border-top: 1px solid var(--border); padding: 48px 32px 36px; max-width
         <li>Inventory tracking</li>
         <li>Accountant share link</li>
       </ul>
-      <a href="#founders" class="plan-btn">Join Founders Edition</a>
+      <a href="https://api.whatsapp.com/send?phone=2349020377046&text=Hi" class="plan-btn" target="_blank" rel="noopener">Try it out 👇</a>
     </div>
 
     <div class="plan-card">
@@ -1532,7 +1524,7 @@ footer { border-top: 1px solid var(--border); padding: 48px 32px 36px; max-width
         <li>Advanced analytics</li>
         <li>Tax Hub</li>
       </ul>
-      <a href="#founders" class="plan-btn">Join Founders Edition</a>
+      <a href="https://api.whatsapp.com/send?phone=2349020377046&text=Hi" class="plan-btn" target="_blank" rel="noopener">Try it out 👇</a>
     </div>
   </div>
 
@@ -1578,7 +1570,7 @@ footer { border-top: 1px solid var(--border); padding: 48px 32px 36px; max-width
   </div>
   <div class="faq-item">
     <div class="faq-q" onclick="toggleFaq(this)">How does TrueFlow work?<div class="faq-icon"></div></div>
-    <div class="faq-a-wrap"><div class="faq-a-inner"><div class="faq-a">Sign up at gettrueflow.com and join the Founders Edition. You can immediately start chatting with Tello, our AI assistant, on the web app. Tell Tello to track a payment, set a reminder, create a client folder, or check your budget. WhatsApp chat is coming soon. No forms to fill in. No spreadsheets. Just conversation.</div></div></div>
+    <div class="faq-a-wrap"><div class="faq-a-inner"><div class="faq-a">Message +2349020377046 on WhatsApp right now, no signup, no download, no form. Say hi, and TrueFlow starts helping immediately, scan a receipt, set a budget, ask for a reminder. Want the fuller dashboard experience too? It's also on the web at app.gettrueflow.com.</div></div></div>
   </div>
   <div class="faq-item">
     <div class="faq-q" onclick="toggleFaq(this)">Is my financial data secure?<div class="faq-icon"></div></div>
@@ -1616,11 +1608,10 @@ footer { border-top: 1px solid var(--border); padding: 48px 32px 36px; max-width
       <div class="benefit-row"><div class="benefit-check"></div>First visibility into the TrueFlow community Andrea contribution total before it becomes public</div>
     </div>
 
-    <div class="founders-form" id="founders-form">
-      <input class="form-input" type="email" placeholder="Enter your email address" id="founders-email" />
-      <button class="btn-primary" onclick="joinWaitlist('founders-email','founders-success','founders-form')">Join Founders Edition</button>
+    <div class="hero-cta-row" style="justify-content:center; margin-bottom:14px;">
+      <a href="https://api.whatsapp.com/send?phone=2349020377046&text=Hi" class="btn-primary" target="_blank" rel="noopener">Try it out 👇</a>
     </div>
-    <div class="success-msg" id="founders-success" style="margin:0 auto 18px;">✓ &nbsp; You're in! We'll reach out personally.</div>
+    <p class="hero-secondary-link" style="text-align:center;"><a href="https://api.whatsapp.com/send?phone=2349020377046&text=Hi" target="_blank" rel="noopener">or apply to be an early Ambassador</a></p>
 
     <p class="founders-note">We're early and still smoothing out rough edges. <span>Available on iOS and Android as GetTrueFlow.</span><br>By True Financial Flow Ltd.</p>
   </div>
@@ -1740,31 +1731,6 @@ footer { border-top: 1px solid var(--border); padding: 48px 32px 36px; max-width
     if (!wasOpen) item.classList.add('open');
   }
 
-  // Waitlist form
-  function joinWaitlist(inputId, successId, formId) {
-    const input = document.getElementById(inputId);
-    const email = input.value.trim();
-    if (!email || !email.includes('@')) {
-      input.style.borderColor = '#FF6B6B';
-      setTimeout(() => input.style.borderColor = '', 1500);
-      return;
-    }
-    document.getElementById(formId).style.display = 'none';
-    document.getElementById(successId).classList.add('show');
-
-    // In production: POST to your Supabase waitlist table or Mailchimp API
-    console.log('Founders Edition signup:', email);
-  }
-
-  // Enter key on inputs
-  document.querySelectorAll('.form-input').forEach(input => {
-    input.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter') {
-        if (input.id === 'hero-email') joinWaitlist('hero-email', 'hero-success', 'hero-form');
-        if (input.id === 'founders-email') joinWaitlist('founders-email', 'founders-success', 'founders-form');
-      }
-    });
-  });
 </script>
 </body>
 </html>

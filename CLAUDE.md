@@ -58,23 +58,37 @@ Two directions of money:
 
 ## Current Feature Status — CRITICAL FOR COPY ACCURACY
 
+> 🔔 MAJOR UPDATE: WhatsApp is now LIVE and CONFIRMED WORKING. The
+> narrative has flipped from earlier versions of this document.
+> WhatsApp is now the PRIMARY hero of the landing page (target 80%
+> of page emphasis), Tello/web app is now secondary, supporting
+> content (target 20% of page emphasis). Do not use old "coming soon
+> via WhatsApp" language anywhere, that period is over.
+
 Use this to determine what to say is LIVE vs COMING SOON.
 Never claim a coming soon feature is already working.
 
-LIVE NOW (can say "available now", "start today"):
-- Tello AI Chat on web app (app.gettrueflow.com/chat)
+LIVE NOW (can say "available now", "start today", "try it now"):
+- WhatsApp bot: message +2349020377046, real conversational AI
+- Receipt scanning via WhatsApp photo
+- Budget creation and tracking via WhatsApp chat
+- Reminders via WhatsApp chat (bills, deadlines, trip planning,
+  personal reminders, all confirmed working in real conversations)
+- Tello AI Chat on web app (app.gettrueflow.com/chat), now secondary
+  to WhatsApp in page emphasis, but still real and live
 - Web dashboard: receipts, budgets, reminders, reports
 - Client CRM: client folders, projects, income tracking
 - Invoicing: generate and send PDF invoices
 - Tax Hub: Track and Estimate (5 countries)
 - Team management: staff, family member, accountant access
-- Founders Edition waitlist at gettrueflow.com
+- Ambassador program, testing in Nigeria, Ghana, Kenya, USA
 
-COMING SOON (say "coming soon via WhatsApp", never "available"):
-- WhatsApp receipt scanning via bot
-- Smart Transfer Recognition (forward payment screenshots)
-- WhatsApp budget and reminder commands
-- WhatsApp client creation via conversation
+COMING SOON (still accurate to flag as upcoming):
+- Smart Transfer Recognition (forward payment screenshots to
+  automatically match and log client payments), this is a more
+  advanced WhatsApp capability still in progress, distinct from
+  basic receipt scanning which IS live
+- Business card scanning for lead capture
 - Mobile app (iOS and Android, listed as GetTrueFlow)
 
 ---
@@ -83,6 +97,9 @@ COMING SOON (say "coming soon via WhatsApp", never "available"):
 
 Visual style reference: https://usexara.ai/
 Take from Xara: full-width alternating feature sections with phone
+mockups showing REAL WhatsApp conversation screenshots or realistic
+mockups, since the actual product now works and can be shown
+authentically, not as a hypothetical
 mockups, dark background, bold two-line headlines, minimal nav,
 single CTA repeated throughout, ALL CAPS eyebrow labels per section.
 Do better than Xara: more sections, more features covered, a proper
@@ -102,6 +119,19 @@ available now, five-country Tax Hub, team access section.
 | Alert Red | #FF6B6B | Urgency only |
 | Warn Amber | #FFB545 | Budget warnings, coming soon badges |
 | WhatsApp Green | #25D366 | WhatsApp channel badges only |
+
+---
+
+## Logo — Current Status
+
+TEMPORARY LOGO IN USE: gradient orb, off-center radial glow,
+Electric Violet core blending into Mint Verify edge. File:
+trueflow_logo_concept3_offcenter.png, transparent background,
+1024x1024px. Use this exact file for the nav logo mark, favicon,
+and any og:image or social preview image on this page. This is a
+placeholder for early Founders Edition launch, not the final brand
+mark. Do not build a new logo treatment, use the provided PNG as is
+until a final vectorized logo replaces it.
 
 ---
 
@@ -599,3 +629,195 @@ The feeling is: "I will never lose track of anything
 important again."
 The features (receipts, clients, budgets, reminders)
 are discovered after the feeling lands.
+
+---
+
+## Landing Page Rewrite — WhatsApp-First Narrative (Current Version)
+
+### Why This Section Supersedes Earlier Hero/CTA Content
+
+WhatsApp is now confirmed live and working. This section replaces
+any earlier hero copy, CTA button text, and feature emphasis
+elsewhere in this document that still reflects the old "coming soon"
+framing or the "Join Founders Edition" CTA. The Ambassador program
+still exists and is still mentioned, but it is no longer the primary
+CTA button, trying the actual working product now is.
+
+### The Primary CTA Change
+
+Replace "Join Founders Edition" as the main button everywhere it
+appears with:
+
+```
+Button text: "Try it out 👇"
+Link: https://api.whatsapp.com/send?phone=2349020377046&text=Hi
+```
+
+This is the single most important change on the page. The main
+action is no longer "join a waitlist for something not ready yet",
+it is "message this number right now and watch it actually work."
+This button appears in the nav, the hero, and the bottom CTA
+section, exactly as the old "Join Founders Edition" button did in
+those same positions, just with new text and a real, working
+destination instead of a waitlist form.
+
+The Ambassador application (the Google Form or equivalent from
+earlier work) remains linked as a SECONDARY action, for the people
+who try WhatsApp, love it, and want to go deeper as an early
+Ambassador with the benefits already documented (lifetime pricing,
+founding badge, direct line to the team). It is no longer the ONLY
+path in, trying WhatsApp needs zero form, zero waiting, zero
+commitment.
+
+### Approved One-Liner Headlines (Rotate/Test These)
+
+These are all approved, pulled directly from real work already done
+in this brand. Use as hero headline options, section headlines, or
+social captions as appropriate:
+
+```
+"Stress less. Flow more."
+
+"Think more. Remember less."
+
+"Money, clients, birthdays & bills, remembered by TrueFlow."
+
+"Your money, clients & reminders, remembered by TrueFlow."
+
+"If your work, family, and personal data are in 15 places,
+ you only need to check 14 to forget something."
+```
+
+### The Hero, Rewritten
+
+```
+Small badge above headline:
+  "🟢 WhatsApp is live. Message us right now."
+
+Headline (primary):
+  "Stress less.
+   Flow more."
+
+Subheadline:
+  "Money, clients, birthdays & bills, remembered by TrueFlow.
+   No app to download. No forms to fill. Just message us on
+   WhatsApp and watch it work."
+
+Primary button: "Try it out 👇" → wa.me link
+Secondary, smaller link below: "or apply to be an early
+  Ambassador" → Ambassador form
+
+Small trust line below buttons:
+  "🇳🇬 🇬🇭 🇰🇪 🇺🇸 — testing live in Nigeria, Ghana, Kenya,
+   and the USA"
+```
+
+### One-Liners That Speak to Each Audience (Use Across Sections)
+
+Family:
+  "Never forget mum's birthday, school fees, or the light bill,
+   ever again."
+
+Individual:
+  "Your money, your reminders, your life. Sorted in one chat."
+
+Business owner:
+  "Chase less. Get paid faster. Know your numbers, always."
+
+### Feature Section Rebalance, 80/20 Split
+
+Rebuild the six alternating feature sections from the earlier
+website spec with this new emphasis. Sections should now show REAL
+WhatsApp conversation mockups (styled after actual confirmed working
+screenshots, receipts scanned, reminders confirmed, budgets set),
+not hypothetical "coming soon" phone mockups.
+
+```
+80% of page emphasis, WhatsApp features, ALL marked
+"Available now" with the teal badge, not amber
+"coming soon" anymore:
+
+Section A, RECEIPT CAPTURE
+  "Scan any receipt. Instantly."
+  Real WhatsApp-style mockup showing a receipt photo 
+  sent and Tello's extracted data reply
+  Badge: teal "Available now on WhatsApp"
+
+Section B, REMINDERS THAT ACTUALLY REMIND
+  "Tell it once. Never forget again."
+  Mockup showing a reminder request and confirmation, 
+  like the real "Pack travel bag" example
+  Badge: teal "Available now on WhatsApp"
+
+Section C, BUDGETS BY CHAT
+  "Say the number. We'll track it."
+  Mockup showing a budget being set in plain language
+  Badge: teal "Available now on WhatsApp"
+
+Section D, SMART TRANSFER RECOGNITION
+  "Forward it. We'll figure it out."
+  Badge: amber "Coming soon", this one specific 
+  capability is genuinely still in progress
+
+20% of page emphasis, Tello/web app, still real, 
+just less prominent:
+
+Section E, CLIENT CRM (web)
+  "Every client. Every project. In one place."
+  Badge: teal "Available now on web"
+
+Section F, MEET TELLO (web, minimized)
+  "Prefer typing on a screen? Tello's on the web too."
+  Shorter section than the others, clearly positioned 
+  as the alternative, not the main event
+  Badge: teal "Available now on web"
+```
+
+### Social/Buzzword Language Bank
+
+Use naturally throughout copy, captions, and section transitions,
+do not force all of these into one place:
+
+```
+"It just works."
+"No app. No forms. Just WhatsApp."
+"The AI that actually remembers."
+"Real. Live. Working right now."
+"Try it before you believe it."
+"Zero setup. One message."
+"This isn't a demo, it's the real thing."
+```
+
+### FAQ Update
+
+Update Q2 ("How does TrueFlow work?") to reflect WhatsApp as the
+primary, immediate path:
+
+```
+Q2. How does TrueFlow work?
+A: Message +2349020377046 on WhatsApp right now, no signup,
+no download, no form. Say hi, and TrueFlow starts helping
+immediately, scan a receipt, set a budget, ask for a reminder.
+Want the fuller dashboard experience too? It's also on the web
+at app.gettrueflow.com.
+```
+
+### Business Rules for This Rewrite
+
+1. Every WhatsApp-related feature already confirmed working
+   (receipts, budgets, reminders) must use the teal "Available now"
+   badge, never amber "coming soon", the old framing is retired
+2. Smart Transfer Recognition remains the one WhatsApp feature still
+   genuinely marked "coming soon", since it is not yet confirmed
+   working, do not accidentally flip this one too
+3. "Try it out" replaces "Join Founders Edition" as the primary CTA
+   everywhere, linking directly to the wa.me message link
+4. The Ambassador program and its application form remain real and
+   linked, but as a secondary path, not the primary CTA
+5. Feature section content and visual emphasis should read as
+   roughly 80% WhatsApp-focused, 20% Tello/web-focused, reflected in
+   both the number of sections dedicated to each and the length/
+   prominence of each section
+6. Phone mockups should be styled to look like real, working WhatsApp
+   conversations (matching the actual confirmed bot behavior already
+   tested), not generic placeholder chat bubbles
