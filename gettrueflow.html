@@ -149,12 +149,12 @@ nav.scrolled {
 .nav-mark {
   width: 34px; height: 34px;
   border-radius: 9px;
-  background: var(--violet);
+  overflow: hidden;
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
 }
 
-.nav-mark svg { width: 18px; height: 18px; }
+.nav-mark img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 .nav-word {
   font-family: 'Space Grotesk', sans-serif;
@@ -1116,12 +1116,7 @@ footer { border-top: 1px solid var(--border); padding: 48px 32px 36px; max-width
 <nav id="nav">
   <a href="#" class="nav-logo">
     <div class="nav-mark">
-      <svg viewBox="0 0 20 20" fill="none">
-        <rect x="2" y="2" width="16" height="16" rx="4" stroke="white" stroke-width="1.2" fill="none"/>
-        <path d="M5 10h10M5 7h6M5 13h8" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
-        <circle cx="16" cy="16" r="4" fill="#00D4AA"/>
-        <path d="M14.5 16l1 1 2-2" stroke="#0A0A0F" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
+      <img src="img/TFLogo.png" alt="TrueFlow">
     </div>
     <div class="nav-word">True<span>Flow</span></div>
   </a>
@@ -1791,12 +1786,7 @@ footer { border-top: 1px solid var(--border); padding: 48px 32px 36px; max-width
   <div class="footer-row">
     <a href="#" class="nav-logo">
       <div class="nav-mark">
-        <svg viewBox="0 0 20 20" fill="none">
-          <rect x="2" y="2" width="16" height="16" rx="4" stroke="white" stroke-width="1.2" fill="none"/>
-          <path d="M5 10h10M5 7h6M5 13h8" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
-          <circle cx="16" cy="16" r="4" fill="#00D4AA"/>
-          <path d="M14.5 16l1 1 2-2" stroke="#0A0A0F" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+        <img src="img/TFLogo.png" alt="TrueFlow">
       </div>
       <div class="nav-word">True<span>Flow</span></div>
     </a>
